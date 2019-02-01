@@ -3,10 +3,14 @@
     <!-- Base application theme. -->
     <style name="AppThemeToolbar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#25252F</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
         <!-- darker variant for the status bar and contextual app bars -->
-        <item name="colorPrimaryDark">#25252F</item>
-        <item name="colorAccent">#FF4081</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="AppThemeToolbar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeToolbar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
