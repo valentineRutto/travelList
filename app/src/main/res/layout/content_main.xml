@@ -7,5 +7,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
-
+<android.support.v4.widget.ContentLoadingProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--scrolllistview of country, and tasks-->
+    </android.support.v4.widget.NestedScrollView>
 </android.support.constraint.ConstraintLayout>
