@@ -43,14 +43,6 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 />
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:padding="5dp"
-                android:layout_margin="5dp"
-                android:background="@android:color/transparent"
-                android:src="@android:drawable/ic_menu_add"
-                />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
@@ -86,7 +78,36 @@ one task where every task will be put shown on a list before saving-->
             android:singleLine="true"
             android:textColorHint="#CCCCCC"
             android:textColor="#666666"/>
+        <EditText
+            android:id="@+id/task_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:hint="Task"
+            android:background="#1E1D25"
+            android:padding="12dp"
+            android:drawableRight="@android:drawable/ic_menu_add"
+            android:ems="10"
+            android:singleLine="true"
+            android:textColorHint="#CCCCCC"
+            android:textColor="#666666"/>
+        <DatePicker
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:id="@+id/datepicker"
+            android:layout_height="wrap_content"/>
 
-
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_add"
+            app:backgroundTint="@color/colorAccent"
+            app:fabSize="normal"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            />
     </LinearLayout>
+
 </RelativeLayout>

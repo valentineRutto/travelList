@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "91233453941",
+    "firebase_url": "https://tutor-5d7ba.firebaseio.com",
+    "project_id": "tutor-5d7ba",
+    "storage_bucket": "tutor-5d7ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91233453941:android:3d2872bee4a2704f",
+        "android_client_info": {
+          "package_name": "com.valentinerutto.travellist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91233453941-51rr7itv5qus7hfhfrqf642lqvf843nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBItwNWjdgffiV1VCcvbcQyiG5h7cmngLY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

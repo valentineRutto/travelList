@@ -24,6 +24,7 @@
 
 
 <!--maybe add more menu items-->
+    <!--change this to tap bar -->
     <android.support.design.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
