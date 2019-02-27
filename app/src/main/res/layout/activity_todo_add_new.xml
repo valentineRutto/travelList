@@ -65,6 +65,20 @@ one task where every task will be put shown on a list before saving-->
 
         </android.support.v7.widget.AppCompatSpinner>
         <EditText
+            android:id="@+id/task_country"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:hint="Task"
+            android:background="#1E1D25"
+            android:padding="12dp"
+            android:drawableRight="@android:drawable/ic_menu_add"
+            android:ems="10"
+            android:singleLine="true"
+            android:textColorHint="#CCCCCC"
+            android:textColor="#666666"/>
+        <EditText
             android:id="@+id/task_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
