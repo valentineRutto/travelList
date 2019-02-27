@@ -116,6 +116,7 @@ one task where every task will be put shown on a list before saving-->
             android:singleLine="true"
             android:textColorHint="#CCCCCC"
             android:textColor="#666666"/>
+        <!--date picker to be visible only when taskdate edittext is clicked-->
         <DatePicker
             android:layout_width="match_parent"
             android:visibility="visible"
