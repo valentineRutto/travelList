@@ -49,9 +49,8 @@ public class todo_add_new extends AppCompatActivity {
         date.setYear(datePicker.getYear());
         date.setDate(datePicker.getDayOfMonth());
 
-        SimpleDateFormat format =new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat format =new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String dateString = format.format(date);
-
 //        save to firebase Db
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         String key = firebaseDatabase.getReference("todoList").push().getKey();
@@ -59,8 +58,9 @@ public class todo_add_new extends AppCompatActivity {
         taskItem taskItem=new taskItem();
         taskItem.setCountry(taskcountry.getText().toString());
         taskItem.setTask(task.getText().toString());
-        taskItem.setTask(dateString);
+        taskItem.setDate(dateString);
 
+        taskdate.setText(dateString);
 
         Map<String,Object> childUpdates = new HashMap<>();
         childUpdates.put(key,taskItem.toFirebaseObject());

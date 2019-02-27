@@ -1,5 +1,6 @@
 package com.valentinerutto.travellist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.bottomappbar.BottomAppBar;
 import android.support.design.widget.FloatingActionButton;
@@ -16,7 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        BottomAppBar bottomAppBar = findViewById(R.id.fab);
+        FloatingActionButton floatingActionButton = findViewById(R.id.fab);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,todo_add_new.class);
+                startActivity(intent);
+            }
+        });
+
 //        bottomAppBar.replaceMenu(R.menu.menu);
 //        bottomAppBar.setNavigationOnClickListener{
 //            // do something interesting on navigation click
