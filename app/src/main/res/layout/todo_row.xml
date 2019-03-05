@@ -2,39 +2,28 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
     <LinearLayout
     android:layout_width="match_parent"
+        android:orientation="vertical"
     android:layout_height="match_parent">
         <!--has the todo tasks and country-->
        <TextView
         android:id="@+id/country"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="70"
-        android:text=""
         android:textSize="16sp"
         android:textColor="@color/colorText"/>
         <TextView
         android:id="@+id/task"
-        android:layout_width="0dp"
+            android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="70"
-        android:text=""
         android:textSize="16sp"
         android:textColor="@color/colorText"/>
         <TextView
-        android:id="@+id/date"
-        android:layout_width="0dp"
+        android:id="@+id/date" android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="70"
-        android:text=""
         android:textSize="16sp"
         android:textColor="@color/colorText"/>
     </LinearLayout>
-</LinearLayout>
 </android.support.constraint.ConstraintLayout>

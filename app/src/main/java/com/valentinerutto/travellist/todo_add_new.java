@@ -10,9 +10,11 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -55,25 +57,47 @@ public class todo_add_new extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         String key = firebaseDatabase.getReference("todoList").push().getKey();
 
-        taskItem taskItem=new taskItem();
-        taskItem.setCountry(taskcountry.getText().toString());
-        taskItem.setTask(task.getText().toString());
-        taskItem.setDate(dateString);
+        taskItem tasks=new taskItem();
+        tasks.setCountry(taskcountry.getText().toString());
+        tasks.setTask(task.getText().toString());
+        tasks.setDate(dateString);
 
-        taskdate.setText(dateString);
+//        taskdate.setText(dateString);
 
         Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put(key,taskItem.toFirebaseObject());
-        firebaseDatabase.getReference("todoList").updateChildren(childUpdates, new DatabaseReference.CompletionListener() {
+
+        childUpdates.put(key,tasks.toFirebaseObject());
+
+//        firebaseDatabase.getReference("todoList").updateChildren(childUpdates,
+//                new DatabaseReference.CompletionListener() {
+//            @Override
+//            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+//                if (databaseError == null){
+//                    finish();
+//                }
+//            }
+//        });
+
+        DatabaseReference ref = firebaseDatabase.getReference("todoList");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                if (databaseError == null){
-                    finish();
-                }
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                taskItem tasks = dataSnapshot.getValue(taskItem.class);
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
+ref.updateChildren(childUpdates, new DatabaseReference.CompletionListener() {
+    @Override
+    public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
 
-
+    }
+});
 
     }
 

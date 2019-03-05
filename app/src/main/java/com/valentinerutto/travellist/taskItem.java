@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class taskItem implements Serializable {
 private String task,country,date;
     public taskItem() {
+
     }
 
     public String getDate() {
